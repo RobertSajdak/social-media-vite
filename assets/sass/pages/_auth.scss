@@ -1,0 +1,116 @@
+@use "../abstaract/" as *;
+
+.auth {
+  display: flex;
+  min-height: 100vh;
+
+  &__img {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width: 40%;
+
+    &--login {
+      background-image: url(/assets/img/login-bg.jpg);
+    }
+
+    &--register {
+      background-image: url(/assets/img/login-bg-2.jpg);
+    }
+
+    @include big-tablet {
+      display: none;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    width: 60%;
+
+    @include big-tablet {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include big-tablet {
+      display: block;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__wrapper {
+    max-width: 400px;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 0 30px 0;
+
+    @include fluid-type(26px, 36px);
+  }
+
+  &__row {
+    position: relative;
+    margin: 0 0 10px 0;
+  }
+
+  &__input {
+    padding: 0 0 0 40px;
+    width: 100%;
+    height: 60px;
+    border-radius: 7px;
+    line-height: 60px;
+    outline: none;
+    border: 2px solid $auth-input-color;
+
+    &:focus {
+      border-color: $theme-color;
+    }
+
+    &--error {
+      border-color: $error-color;
+    }
+  }
+
+  &__inputIcon {
+    position: absolute;
+    color: $auth-input-color;
+    font-size: 20px;
+    inset: 20px auto auto 6px;
+  }
+
+  &__error {
+    margin: 6px 0 0 0;
+    font-size: 12px;
+    color: $error-color;
+  }
+
+  &__button {
+    background-color: $auth-button-bg;
+    border: none;
+    border-radius: 7px;
+    color: $auth-button-text;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__info {
+    color: $auth-info-color;
+    margin: 16px 0 0 0;
+    font-size: 12px;
+  }
+}

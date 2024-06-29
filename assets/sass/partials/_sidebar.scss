@@ -1,0 +1,103 @@
+@use "../abstaract/" as *;
+
+.sidebar {
+  height: 100vh;
+  inset: 0 auto auto 0;
+  overflow-y: scroll;
+  padding: 105px 15px 15px 15px;
+  position: fixed;
+  width: $sidebar-width;
+
+  @include scrollbars(5px, $theme-color, transparent);
+
+  &__box {
+    background-color: $sidebar-bg-color;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    margin: 0 0 10px 0;
+  }
+
+  &__boxTitle {
+    font-size: 10px;
+    color: $sidebar-title-color;
+    font-weight: 500;
+    margin: 0 0 10px 10px;
+  }
+
+  &__boxItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+    margin: 4px;
+
+    &--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 24, 65);
+      background: linear-gradient(
+        270deg,
+        rgba(0, 24, 65, 1) 0%,
+        rgba(4, 92, 200, 1) 65%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      border-radius: 50%;
+      height: 36px;
+      width: 36px;
+
+      & i {
+        color: $sidebar-text-color;
+        font-size: 14px;
+      }
+    }
+
+    #badges {
+      background: rgb(245, 83, 2);
+      background: linear-gradient(
+        25deg,
+        rgba(245, 83, 2, 1) 0%,
+        rgba(200, 63, 4, 1) 60%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    #explore {
+      background: rgb(245, 140, 2);
+      background: linear-gradient(
+        80deg,
+        rgba(245, 140, 2, 1) 0%,
+        rgba(255, 221, 107, 1) 50%,
+        rgba(245, 140, 2, 1) 100%
+      );
+    }
+
+    #groups {
+      background: rgb(245, 2, 97);
+      background: linear-gradient(
+        90deg,
+        rgba(245, 2, 97, 1) 0%,
+        rgba(255, 119, 0, 1) 100%
+      );
+    }
+
+    #author {
+      background: rgb(2, 88, 245);
+      background: linear-gradient(
+        72deg,
+        rgba(2, 88, 245, 1) 0%,
+        rgba(11, 206, 242, 1) 81%,
+        rgba(0, 116, 255, 1) 100%
+      );
+    }
+
+    &--name {
+      color: $sidebar-name-color;
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}

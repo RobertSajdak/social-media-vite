@@ -1,0 +1,124 @@
+@use "../abstaract/" as *;
+
+.settings {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 9px;
+
+  &__boxTitle {
+    color: $settings-text-color;
+    font-size: 10px;
+    font-weight: 500;
+    margin: 30px 0 20px 10px;
+  }
+
+  &__boxItem {
+    align-items: center;
+    display: flex;
+    height: 45px;
+    margin: 20px 4px 4px 4px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $settings-text-color;
+    position: relative;
+    width: 100%;
+
+    &:nth-of-type(3) {
+      border-bottom: none;
+    }
+    
+    &:nth-of-type(5) {
+      border-bottom: none;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &--icon {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 50%;
+      height: 45px;
+      width: 45px;
+
+      & i {
+        color: $settings-icon-color;
+        font-size: 22px;
+      }
+    }
+
+    #info,
+    #help {
+      background: rgb(2, 88, 245);
+      background: linear-gradient(
+        72deg,
+        rgba(2, 88, 245, 1) 0%,
+        rgba(11, 206, 242, 1) 81%,
+        rgba(0, 116, 255, 1) 100%
+      );
+    }
+
+    #address,
+    #notification {
+      background: rgb(245, 140, 2);
+      background: linear-gradient(
+        80deg,
+        rgba(245, 140, 2, 1) 0%,
+        rgba(255, 221, 107, 1) 50%,
+        rgba(245, 140, 2, 1) 100%
+      );
+    }
+
+    #acount,
+    #logout {
+      background: rgb(245, 83, 2);
+      background: linear-gradient(
+        25deg,
+        rgba(245, 83, 2, 1) 0%,
+        rgba(200, 63, 4, 1) 60%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    #cards {
+      background: rgb(245, 2, 97);
+      background: linear-gradient(
+        90deg,
+        rgba(245, 2, 97, 1) 0%,
+        rgba(255, 119, 0, 1) 100%
+      );
+    }
+
+    #password {
+      background: rgb(0, 24, 65);
+      background: linear-gradient(
+        270deg,
+        rgba(0, 24, 65, 1) 0%,
+        rgba(4, 92, 200, 1) 65%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    &--name {
+      align-items: center;
+      color: $settings-name-color;
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 10px;
+    }
+
+    &::after {
+      position: absolute;
+      inset: auto 0 auto auto;
+      content: "";
+      width: 10px;
+      height: 10px;
+      justify-content: space-between;
+      border: 2px solid $settings-text-color;
+      border-bottom: 0;
+      border-left: 0;
+      rotate: 45deg;
+    }
+  }
+}
